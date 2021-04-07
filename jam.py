@@ -44,7 +44,7 @@ def reg():
     time.sleep(1)
     
     try:
-        to = open('/sdcard/.hst.txt', 'r').read()
+        to = open('/sdcard/hst.txt', 'r').read()
     except (KeyError, IOError):
         reg2()
 
