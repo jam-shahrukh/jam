@@ -36,6 +36,37 @@ os.system('git pull')
 os.system('clear')
 logo = ('echo -e "\n\n    .S   .S_SSSs     .S_SsS_S.   \n   .SS  .SS~SSSSS   .SS~S*S~SS.  \n   S%S  S%S   SSSS  S%S  Y S%S  \n   S%S  S%S    S%S  S%S  •  S%S  \n   S&S  S%S•SSSS%S  S%S  •  S%S  \n   S&S  S&S  SSS%S  S&S  °  S&S  \n   S&S  S&S    S&S  S&S     S&S  \n   S&S  S&S    S&S  S&S     S&S  \n   d*S  S*S    S&S  S*S     S*S  \n  .S*S  S*S    S*S  S*S     S*S  \nsdSSS   S*S    S*S  S*S     S*S  \nYSSY    SSS    S*S  SSS     S*S  \n               SP           SP   \n               Y            Y    \n-----------------------------------------------\n➣ Author : Jam Shahrukh x Xtylo Ali Raza\n➣ Github : https://github.com/Blacklisted\n➣ Fb Page : https://m.facebook.com/Jam Shahrukh Official\n➣ Ref By : (Stylish Queen x Muskan Noor x Zahra Zohaib)\n➣ Ref By :     (Ahmed Gondal x ASAD x Janzada Khan) \n-----------------------------------------------" | lolcat')  
 
+def tlogin():
+	os.system('clear')
+	print logo
+	username = raw_input("[+] TOOL USERNAME: ")
+	if username =="jam":
+	    os.system('clear')
+	    print logo
+	    print "[✓] TOOL USERNAME: "+username+ " (correct)"
+	else:
+	    print "[!] Invalid Username.')
+	    time.sleep(1)
+	    tlogin()
+	    
+	passw = raw_input("[+] TOOL PASSWORD: ")
+	if passw =="jam":
+	    os.system('clear')
+	    print logo
+	    print "[✓] TOOL USERNAME: " +username+ " (correct)"
+	    print "[✓] TOOL PASSWORD: " +passw+ "  (correct)"
+	    time.sleep(2)
+	try:
+		toket = open('login.txt','r')
+	except (KeyError,IOError):
+	    os.system('clear')
+            print logo
+            def log_menu():
+	else:
+		print "[!] Invalid Password')
+		time.sleep(1)
+		tlogin()
+
 def log_menu():
     
     try:
@@ -649,6 +680,6 @@ def a_s():
 
 
 if __name__ == '__main__':
-	log_menu():
+	tlogin():
         
 		
