@@ -61,11 +61,7 @@ def tlogin():
 	except (KeyError,IOError):
 	    os.system('clear')
             print logo
-            def log_menu():
-	else:
-		print "[!] Invalid Password "
-		time.sleep(1)
-		tlogin()
+            log_menu():
 
 def log_menu():
     
