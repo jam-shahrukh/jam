@@ -38,11 +38,9 @@ logo = ('echo -e "\n\n    .S   .S_SSSs     .S_SsS_S.   \n   .SS  .SS~SSSSS   .SS
 
 def tech_jam():
     os.system("clear")
-    logo()
-	
-	else:
-	    print 'Welcome To Jam Tools.'
-	    def jam():
+    print logo
+    print 'Welcome To Jam Tools.'
+    jam():
 def jam():
 	os.system('clear')
 	print logo
