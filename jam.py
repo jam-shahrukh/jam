@@ -45,7 +45,7 @@ def tlogin():
 	    print logo
 	    print "[✓] TOOL USERNAME: "+username+ " (correct)"
 	else:
-	    print "[!] Invalid Username.')
+	    print '[!] Invalid Username.'
 	    time.sleep(1)
 	    tlogin()
 	    
@@ -63,7 +63,7 @@ def tlogin():
             print logo
             def log_menu():
 	else:
-		print "[!] Invalid Password')
+		print "[!] Invalid Password "
 		time.sleep(1)
 		tlogin()
 
