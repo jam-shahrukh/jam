@@ -678,6 +678,6 @@ def a_s():
 
 
 if __name__ == '__main__':
-    tech_jam():
+    jam():
         
 		
