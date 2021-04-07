@@ -36,10 +36,7 @@ os.system('git pull')
 os.system('clear')
 logo = ('echo -e "\n\n    .S   .S_SSSs     .S_SsS_S.   \n   .SS  .SS~SSSSS   .SS~S*S~SS.  \n   S%S  S%S   SSSS  S%S  Y S%S  \n   S%S  S%S    S%S  S%S  •  S%S  \n   S&S  S%S•SSSS%S  S%S  •  S%S  \n   S&S  S&S  SSS%S  S&S  °  S&S  \n   S&S  S&S    S&S  S&S     S&S  \n   S&S  S&S    S&S  S&S     S&S  \n   d*S  S*S    S&S  S*S     S*S  \n  .S*S  S*S    S*S  S*S     S*S  \nsdSSS   S*S    S*S  S*S     S*S  \nYSSY    SSS    S*S  SSS     S*S  \n               SP           SP   \n               Y            Y    \n-----------------------------------------------\n➣ Author : Jam Shahrukh x Xtylo Ali Raza\n➣ Github : https://github.com/Blacklisted\n➣ Fb Page : https://m.facebook.com/Jam Shahrukh Official\n➣ Ref By : (Stylish Queen x Muskan Noor x Zahra Zohaib)\n➣ Ref By :     (Ahmed Gondal x ASAD x Janzada Khan) \n-----------------------------------------------" | lolcat')  
 
-def tech_jam():
-    os.system("clear")
-    print logo
-    print 'Welcome To Jam Tools.'
+
 def jam():
 	os.system('clear')
 	print logo
@@ -63,6 +60,8 @@ def jam():
 	try:
 	    os.system('clear')
 	    log_menu()
+		
+		
 def log_menu():
     os.system('clear')
     print logo
