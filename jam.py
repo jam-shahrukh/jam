@@ -59,7 +59,12 @@ def jam():
 	    time.sleep(2)
 	try:
 	    os.system('clear')
-	    log_menu()
+	except (KeyError,IOError):
+		log_menu()
+	else:
+	    print '[!] Invalid Username.'
+	    time.sleep(1)
+	    jam()
 		
 		
 def log_menu():
