@@ -63,9 +63,11 @@ def jam():
 	try:
 	    os.system('clear')
 	    log_menu()
-
 def log_menu():
-    
+    os.system('clear')
+    print logo
+    print ''
+
     try:
         t_check = open('access_token.txt', 'r')
         menu()
