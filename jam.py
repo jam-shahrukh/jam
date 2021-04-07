@@ -40,7 +40,6 @@ def tech_jam():
     os.system("clear")
     print logo
     print 'Welcome To Jam Tools.'
-    jam():
 def jam():
 	os.system('clear')
 	print logo
