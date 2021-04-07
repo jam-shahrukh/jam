@@ -62,6 +62,7 @@ def jam():
 	    time.sleep(2)
 	try:
 	    os.system('clear')
+	    log_menu()
 
 def log_menu():
     
