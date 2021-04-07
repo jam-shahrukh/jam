@@ -60,8 +60,6 @@ def tlogin():
 		toket = open('login.txt','r')
 	except (KeyError,IOError):
 	    os.system('clear')
-            print logo
-            log_menu():
 
 def log_menu():
     
