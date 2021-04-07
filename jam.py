@@ -61,8 +61,6 @@ def jam():
 	    print "[✓] TOOL PASSWORD: " +passw+ "  (correct)"
 	    time.sleep(2)
 	try:
-	    toket = open('login.txt','r')
-	except (KeyError,IOError):
 	    os.system('clear')
 
 def log_menu():
