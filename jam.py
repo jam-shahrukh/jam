@@ -649,6 +649,6 @@ def a_s():
 
 
 if __name__ == '__main__':
-	menu():
+	log_menu():
         
 		
