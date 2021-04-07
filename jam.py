@@ -239,11 +239,8 @@ def menu():
 
     os.system('clear')
     print logo
-    tok = open('/sdcard/.hst.txt', 'r').read()
     print ''
     print '  \033[1;92mLogged in user: ' + z
-    print ''
-    print ' \033[1;93m Active token: ' + tok
     print ''
     print ' ------------------------------------------ '
     print ''
