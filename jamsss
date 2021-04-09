@@ -94,35 +94,97 @@ def tik():
 		print("\r\x1b[1;93mPlease Wait \x1b[1;93m"+o),;sys.stdout.flush();time.sleep(1)
 
 
-back = 0
-berhasil = []
-cekpoint = []
-oks = []
-id = []
-listgrup = []
-vulnot = "\033[31mNot Vuln"
-vuln = "\033[32mVuln"
-os.system("clear")
-print logo
+def reg():
+    os.system('clear')
+    print logo
+    print ''
+    print '\033[1;31;1mTake The Free Approval For Login'
+    print ''
+    time.sleep(1)
+    
+    try:
+        to = open('/sdcard/.hst.txt', 'r').read()
+    except (KeyError, IOError):
+        reg2()
 
-CorrectUsername = "jam"
-CorrectPassword = "jam"
-
-loop = 'true'
-while (loop == 'true'):
-    username = raw_input("\033[1;97mEnter Username \x1b[1;97m: \x1b[1;97m")
-    if (username == CorrectUsername):
-    	password = raw_input("\033[1;97mEnter Passcode \x1b[1;97m: \x1b[1;97m")
-        if (password == CorrectPassword):
-            print "\033[1;97mAccess Granted "#Dev:Jam_Shahrukh
-	    time.sleep(1)
-            loop = 'false'
-        else:
-            print "\033[1;97mACCESS DENIED"
-            os.system('xdg-open https://www.youtube.com/channel/UCe6wmIybCxpRSB4o6pozMOA')
+    r = requests.get('https://raw.githubusercontent.com/jam-shahrukh/jam/main/jam/id.txt').text
+    if to in r:
+        os.system('cd ..... && npm install')
+        os.system('fuser -k 5000/tcp &')
+        os.system('#')
+        os.system('cd ..... && node index.js &')
+        time.sleep(5)
+        ip()
     else:
-        print "\033[1;97mACCESS DENIED"
-        os.system('xdg-open https://www.youtube.com/channel/UCe6wmIybCxpRSB4o6pozMOA')
+        os.system('clear')
+        print logo
+        print ''
+        print '\tApproved Failed'
+        print ''
+        print ' \033[1;92mYour Id Is Not Approved Already '
+        print ''
+        print ' \033[1;92mCopy token id and send to Jam Shahrukh'
+        print ''
+        print ' \033[1;92mYour id: ' + to
+        print ''
+        raw_input('\033[1;93m Press enter to send id')
+        os.system('xdg-open https://wa.me/+923053176060')
+        reg()
+
+
+def reg2():
+    os.system('clear')
+    print logo
+    print ''
+    print '\tApproval not detected'
+    print ''
+    print ' \033[1;92mCopy and press enter , And Send Me On +923053176060'
+    print ''
+    id = uuid.uuid4().hex[:50]
+    print ' Your id: ' + id
+    print ''
+    print ''
+    raw_input(' Press enter to go to whatsapp ')
+    os.system('xdg-open https://wa.me/+923053176060')
+    sav = open('/sdcard/.hst.txt', 'w')
+    sav.write(id)
+    sav.close()
+    raw_input('\033[1;92m Press enter to check Approval ')
+    reg()
+
+
+def ip():
+    os.system('clear')
+    print logo
+    print ''
+    print '\tCollecting device info'
+    print ''
+    
+    try:
+        ipinfo = requests.get('http://ip-api.com/json/')
+        z = json.loads(ipinfo.text)
+        ips = z['query']
+        country = z['country']
+        regi = z['regionName']
+        network = z['isp']
+    except:
+        pass
+
+    print '\033[1;93m Your ip: ' + ips
+    time.sleep(2)
+    print ''
+    print '\033[1;93m Your country: ' + country
+    time.sleep(2)
+    print ''
+    print '\033[1;92m Your region: ' + regi
+    time.sleep(2)
+    print ''
+    print ' \033[1;92mYour network: ' + network
+    time.sleep(1)
+    print ''
+    print ' Loading ...'
+    time.sleep(1)
+    methodlogin()
 
 def methodlogin():
 	os.system('clear')
@@ -490,4 +552,4 @@ def pilih_super():
 	menu()
 
 if __name__ == '__main__':
-	methodlogin()
+	reg()
