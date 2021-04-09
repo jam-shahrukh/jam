@@ -357,6 +357,9 @@ def super():
 	pilih_super()
 
 def pilih_super():
+	id = []
+        cps = []
+        oks = []
 	peak = raw_input("\n\033[1;97mChoose Option ≻ \033[1;97m")
 	if peak =="":
 		print "\x1b[1;97mFill in correctly"
@@ -390,9 +393,11 @@ def pilih_super():
 		idt = raw_input("\033[1;97m≻\033[1;97mLink ID\033[1;37m: \033[1;97m")
 		
 		try:
-			r = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
-			q = json.loads(r.text)
+			r = requests.get('https://graph.facebook.com/' + idt + '?access_token=' + token)
+                        q = json.loads(r.text)
                         z = q['name']
+			os.system('clear')
+                        print logo
 			print ' \033[1;92mCloning from: ' + z
 		except KeyError:
 			print"\x1b[1;97mID Not Found!"
