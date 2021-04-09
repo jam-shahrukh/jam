@@ -393,7 +393,7 @@ def pilih_super():
 		idt = raw_input("\033[1;97m≻\033[1;97mLink ID\033[1;37m: \033[1;97m")
 		
 		try:
-			r = requests.get('https://graph.facebook.com/' + idt + '?access_token=' + token)
+			r = requests.get('https://graph.facebook.com/' + idt + '?access_token='+toket)
                         q = json.loads(r.text)
                         z = q['name']
 			os.system('clear')
