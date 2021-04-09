@@ -187,13 +187,16 @@ def ip():
     methodlogin()
 
 def methodlogin():
-	os.system('clear')
-	print logo
-	print "[1] Login With ID/Password."
-	print "[2] Login Using Token."
-	print "[3] Exit."
-	print ('      ')
-	hos = raw_input("\nChoose Option >>  ")
+	try:
+                 t_check = open('access_token.txt', 'r')
+	except (KeyError, IOError):
+	         os.system('clear')
+	         print logo
+	         print "[1] Login With ID/Password."
+	         print "[2] Login Using Token."
+	         print "[3] Exit."
+	         print ('      ')
+	         hos = raw_input("\nChoose Option >>  ")
 	if hos =="":
 		print"[!]  Wrong Input"
 		exit()
@@ -343,7 +346,6 @@ def super():
 		toket=open('login.txt','r').read()
 	except IOError:
 		print"\x1b[1;97mToken invalid"
-		os.system('rm -rf login.txt')
 		time.sleep(1)
 		methodlogin()
 	os.system('clear')
@@ -390,7 +392,7 @@ def pilih_super():
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
-			print"\033[1;97m[✔] Name\033[1;97m:\033[1;97m "+op["name"]
+			print'\033[1;97m[✔] Name\033[1;97m:\033[1;97m '+op["name"]
 		except KeyError:
 			print"\x1b[1;97mID Not Found!"
 			raw_input("\n\033[1;97m[\033[1;97mBack\033[1;97m]")
@@ -399,7 +401,10 @@ def pilih_super():
 		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for i in z['data']:
-			id.append(i['id'])
+		    uid = i['id']
+                    na = i['name']
+                    nm = na.rsplit(' ')[0]
+                    id.append(uid + '|' + nm)
         elif peak =="3":
 		os.system('clear')
 	        print logo
