@@ -6,22 +6,28 @@
 #Whatsapp : ++971528752764
 #Pakistan Cyber Expert
 #Alone Coder 
-import os
-import sys
-import time
-import datetime
-import re
-import threading
-import json
-import random
-import requests
-import hashlib
-import cookielib
-import uuid
-from multiprocessing.pool import ThreadPool
-from requests.exceptions import ConnectionError
-__author__ = 'Mr.James'
-__copyright = 'All rights reserved . Copyright  Mr.James'
+    import os
+    import sys
+    import time
+    import datetime
+    import re
+    import threading
+    import json
+    import random
+    import requests
+    import hashlib
+    import cookielib
+    import uuid
+    import getpass
+    import mechanize
+    from multiprocessing.pool import ThreadPool
+    from requests.exceptions import ConnectionError
+except ImportError:
+    os.system('pip2 install requests')
+    os.system('pip2 install mechanize')
+    os.system('python2 jam.py')
+    __author__ = 'Mr.James'
+    __copyright = 'All rights reserved . Copyright  Mr.James'
 os.system('termux-setup-storage')
 
 try:
@@ -555,7 +561,7 @@ def pilih_super():
 	
 	print '\033[1;97mProcess Has Been Completed.'
 	print"\033[1;97m-----------------"
-	print"\033[1;97mTotal OK/\x1b[1;97mCP \033[1;97m: \033[1;97m"+str(len(oks))+"\033[1;97m/\033[1;97m"+str(len(cekpoint))
+	print ' \033[1;92mTotal Ok/Cp:' + str(len(oks)) + '/' + str(len(cps))
 	print "\033[1;97m---------------------------------------------------"
 	
 	
