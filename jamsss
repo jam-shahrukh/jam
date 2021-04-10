@@ -6,6 +6,7 @@
 #Whatsapp : ++971528752764
 #Pakistan Cyber Expert
 #Alone Coder 
+try:
     import os
     import sys
     import time
